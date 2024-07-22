@@ -27,13 +27,16 @@ void main () {
 
 		switch (chose) {
 			case 1:
-				printf("Введите имя абонента \n");
-				scanf("%s", phonebook[current].name);
-				printf("Введите фамилию абонента \n");
-                                scanf("%s", phonebook[current].second_name);
-				printf("Введите телефон абонента \n");
-                                scanf("%s", phonebook[current].tel);
-				current++;
+				if (current<99) {
+					printf("Введите имя абонента \n");
+					scanf("%s", phonebook[current].name);
+					printf("Введите фамилию абонента \n");
+                                	scanf("%s", phonebook[current].second_name);
+					printf("Введите телефон абонента \n");
+                                	scanf("%s", phonebook[current].tel);
+					current++;
+				} else 
+					printf("Достигнут лимит в 100 записей\n");
 				break;
 			case 2:
 				if (current>0) {
