@@ -66,8 +66,11 @@ void main () {
                 scanf("%d",&chose);
                 switch (chose) {
                         case 1:
-			        abon_add(ptr, count);
-			        count++;
+			        if (count < 100) {
+					abon_add(ptr, count);
+			        	count++;
+				} else 
+					printf("Достигнут лимит в 100 записей\n");
 				break;
                         case 2:
 	        		abon_delete(ptr, count);
