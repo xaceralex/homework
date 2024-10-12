@@ -12,9 +12,9 @@ BIN := main
 .PHONY: gdb
 
 $(BIN): $(SRC) $(CLN) $(SCF) $(OBJ) $(LIB)
-		$(CC) $(LIB_SRC) -c $(LIB_OB)
+		$(CC) $(LIB_SRC) -c
 		ar rc  lib$(LIB).a $(LIB_OB)
-		$(CC) $(SRC) -c $(OBJ)
+		$(CC) $(SRC) -c
 		$(CC) $(OBJ) -o $(BIN) -L. -l$(LIB)
 
 $(CLN): $(SRC)

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <malloc.h>
 #include <string.h>
 
@@ -70,7 +71,7 @@ void main () {
                 scanf("%d",&chose);
                 switch (chose) {
 			case 1:
-				if (count == 0) {
+                                if (count == 0) {
                                         phonebook = malloc(sizeof(struct abonent));
                                         abon_add(ptr, count);
                                         count++;
