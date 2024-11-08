@@ -68,7 +68,7 @@
 		zcat initramfs.cpio.gz | cpio -t
 
 	15) Запустим qemu:
-		QEMU_AUDIO_DRV=none qemu-system-arm -M vexpress-a9 -kernel zImage -initrd 	initramfs.cpio.gz -dtb vexpress-v2p-ca9.dtb -append "console=ttyAMA0 rdinit=/bin/ash" -	nographic
+		QEMU_AUDIO_DRV=none qemu-system-arm -M vexpress-a9 -kernel zImage -initrd 	initramfs.cpio.gz -dtb vexpress-v2p-ca9.dtb -append "console=ttyAMA0 rdinit=/bin/ash" -nographic
 
 	16) После запуска qemu попробуем выполнить несколько команд в «ash»:
 		ls
